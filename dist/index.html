@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DEL OCC — Command Control System | Terminal 3 IGI Airport</title>
+  <meta name="description" content="Airport Operations Control Center — Indira Gandhi International Airport (DEL)" />
+  <meta name="theme-color" content="#090d16" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%230f172a'/><circle cx='16' cy='16' r='12' fill='none' stroke='%2338bdf8' stroke-width='2'/><path d='M16 6 L20 16 L16 14 L12 16 Z' fill='%2338bdf8'/></svg>" />
+  
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.3/dist/chart.umd.min.js"></script>
+  <!-- PapaParse -->
+  <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+  <script type="module" crossorigin src="./assets/index-B4zEIlmK.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-DqOIE8nP.css">
+</head>
+<body>
+
+<!-- Background Canvas -->
+<canvas id="bg-canvas"></canvas>
+
+<!-- ═══════════════════ BOOT SCREEN ═══════════════════ -->
+<div id="boot-screen">
+  <div class="boot-glitch-title">
+    <span>✈ DEL</span> OCC COMMAND
+  </div>
+  <div class="boot-sub">INDIRA GANDHI INTL AIRPORT · TERMINAL 3 COMMAND SYSTEM</div>
+
+  <div class="boot-progress-wrap" id="boot-files">
+    <!-- Loaded dynamically by JS loader -->
+  </div>
+
+  <div class="boot-bar-outer">
+    <div class="boot-bar-inner" id="boot-total-bar"></div>
+  </div>
+
+  <div class="boot-status-line" id="boot-status">INITIALIZING SYSTEM MODULES...</div>
+</div>
+
+<!-- ═══════════════════ MAIN APP INTERFACE ═══════════════════ -->
+<div id="app">
+
+  <!-- TOP STATUS STRIP (TICKER) -->
+  <div id="status-strip">
+    <div class="ticker-wrap">
+      <div id="ticker-inner"></div>
+    </div>
+  </div>
+
+  <!-- TOP NAVIGATION BAR -->
+  <nav id="nav">
+    <div class="nav-logo">
+      <div class="nav-logo-icon">✈</div>
+      <div>
+        <div class="nav-logo-text">DEL OCC</div>
+        <div class="nav-logo-sub">IGI AIRPORT T3</div>
+      </div>
+    </div>
+
+    <div class="nav-tabs" id="nav-tabs">
+      <div class="nav-tab active" data-view="overview">
+        <span class="nav-tab-icon">⚡</span>
+        <span>OVERVIEW</span>
+      </div>
+      <div class="nav-tab" data-view="flights">
+        <span class="nav-tab-icon">✈</span>
+        <span>FLIGHTS</span>
+        <span class="nav-badge" id="nav-badge-flights">0</span>
+      </div>
+      <div class="nav-tab" data-view="gates">
+        <span class="nav-tab-icon">🚪</span>
+        <span>GATES</span>
+      </div>
+      <div class="nav-tab" data-view="baggage">
+        <span class="nav-tab-icon">🧳</span>
+        <span>BAGGAGE</span>
+      </div>
+      <div class="nav-tab" data-view="passengers">
+        <span class="nav-tab-icon">👥</span>
+        <span>PAX HUB</span>
+      </div>
+      <div class="nav-tab" data-view="security">
+        <span class="nav-tab-icon">🔐</span>
+        <span>SECURITY</span>
+        <span class="nav-badge" id="nav-badge-security">0</span>
+      </div>
+      <div class="nav-tab" data-view="maintenance">
+        <span class="nav-tab-icon">🔧</span>
+        <span>MAINTENANCE</span>
+        <span class="nav-badge" id="nav-badge-maint">0</span>
+      </div>
+      <div class="nav-tab" data-view="staff">
+        <span class="nav-tab-icon">👔</span>
+        <span>STAFF</span>
+      </div>
+      <div class="nav-tab" data-view="retail">
+        <span class="nav-tab-icon">🛍</span>
+        <span>RETAIL</span>
+      </div>
+    </div>
+
+    <div class="nav-right">
+      <div class="sim-pod">
+        <button class="sim-btn" id="sim-slower" title="Slower">⏪</button>
+        <button class="sim-btn active" id="sim-playpause" title="Pause">⏸</button>
+        <button class="sim-btn" id="sim-faster" title="Faster">⏩</button>
+        <span class="sim-speed" id="sim-speed-label">60×</span>
+      </div>
+
+      <div class="clock-pod">
+        <div class="clock-time" id="clock-time">00:00:00</div>
+        <div class="clock-date" id="clock-date">-- --- ----</div>
+      </div>
+
+      <button class="alert-btn" id="alerts-btn" title="Incidents & Alerts">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/>
+          <path d="M13.73 21a2 2 0 0 1-3.46 0"/>
+        </svg>
+        <span class="alert-count" id="alerts-count">0</span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- MAIN WORKSPACE -->
+  <main id="main">
+    <div id="view-overview" class="view active"></div>
+    <div id="view-flights" class="view"></div>
+    <div id="view-gates" class="view"></div>
+    <div id="view-baggage" class="view"></div>
+    <div id="view-passengers" class="view"></div>
+    <div id="view-security" class="view"></div>
+    <div id="view-maintenance" class="view"></div>
+    <div id="view-staff" class="view"></div>
+    <div id="view-retail" class="view"></div>
+  </main>
+
+</div><!-- /#app -->
+
+<!-- INCIDENT / ALERT DRAWER -->
+<div id="alert-drawer">
+  <div class="alert-drawer-hd">
+    <div class="alert-drawer-title">
+      <span>⚡</span> INCIDENT FEED
+    </div>
+    <button class="close-btn" id="alert-close">CLOSE [ESC]</button>
+  </div>
+  <div class="alert-list" id="alert-list"></div>
+</div>
+
+<!-- MODAL POPUP -->
+<div class="modal-back" id="modal-backdrop">
+  <div class="modal" id="modal">
+    <div class="modal-hd">
+      <div>
+        <div class="modal-title" id="modal-title">DETAILED METRICS</div>
+        <div class="modal-sub" id="modal-subtitle"></div>
+      </div>
+      <button class="close-btn" id="modal-close">✕ CLOSE</button>
+    </div>
+    <div class="modal-bd" id="modal-body"></div>
+  </div>
+</div>
+
+</body>
+</html>

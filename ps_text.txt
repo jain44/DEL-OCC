@@ -1,0 +1,107 @@
+﻿Frontend Arena | Frontend Wars 2026 | Grand Finale
+FRONTEND ARENA
+FRONTEND WARS 2026
+GRAND FINALE - PROBLEM STATEMENT
+CRITICAL SYSTEMS & REAL-TIME OPERATIONS
+AIRPORT OPERATIONS CONTROL CENTER
+1. Challenge Brief
+Build a real-time Airport Operations Control Center that transforms the provided multi-table airport 
+dataset into a unified, interactive operational interface for monitoring flights, gates, baggage, 
+passengers, security, maintenance, staff and other airport activities.
+2. Background
+Modern airports operate as complex, time-sensitive ecosystems in which multiple departments must 
+coordinate simultaneously. Operational teams need a single interface that can convert fragmented data 
+into clear situational awareness, highlight disruptions, and support rapid operational decisions.
+3. Your Mission
+Design and develop a production-quality frontend that behaves like an Airport Operations Control 
+Center. The application should unify the supplied datasets, expose meaningful relationships between 
+them, and simulate a live operational environment rather than presenting a collection of static charts.
+4. Provided Dataset
+Participants will work with the provided multi-table airport dataset, including:
+∩é╖
+flights.csv - flight schedules, status and operational flight information.
+∩é╖
+gate_events.csv - gate activity and gate-related events.
+∩é╖
+baggage.csv - baggage handling and movement information.
+∩é╖
+passengers.csv - passenger-related operational data.
+∩é╖
+security_screening.csv - security screening activity.
+∩é╖
+maintenance_logs.csv - maintenance events and operational logs.
+∩é╖
+staff_shifts.csv - staff scheduling and shift information.
+∩é╖
+retail_transactions.csv - airport retail transaction activity.
+∩é╖
+data_dictionary.md - field definitions and dataset reference.
+5. Core Product Expectations
+∩é╖
+Unified operations dashboard with clear airport-wide status visibility.
+∩é╖
+Flight monitoring with search, filters, status indicators and detailed views.
+∩é╖
+Gate and operational resource visibility, including conflicts or abnormal conditions where 
+supported by the data.
+
+Frontend Arena | Frontend Wars 2026 | Grand Finale
+∩é╖
+Operational views for baggage, passengers, security, maintenance and staff.
+∩é╖
+Meaningful cross-table relationships instead of isolated dataset pages.
+∩é╖
+Alerts, exceptions or incident-style indicators that help users identify what requires attention.
+∩é╖
+Simulated real-time behaviour using the supplied static dataset, such as timed status changes, event 
+feeds or operational updates.
+∩é╖
+Responsive, polished and information-dense UI suitable for a mission-critical operations 
+environment.
+∩é╖
+Useful interactions such as filtering, sorting, drill-down views, timelines, detail panels and 
+operational controls.
+6. Functional Standard
+A visually attractive dashboard alone is not sufficient. The final solution must demonstrate meaningful 
+functionality and operational thinking. Participants should decide how the supplied data can be 
+transformed into a coherent workflow for airport operators and how users can move from high-level 
+monitoring to detailed investigation.
+7. Real-Time Simulation
+The provided dataset may be static, but the application must create the experience of a changing 
+operational environment. Teams may simulate event progression, status changes, alerts, queue 
+updates, timelines or other live behaviours using frontend logic. The simulation should remain 
+consistent with the supplied data and the product experience.
+8. Submission Deliverables
+∩é╖
+Working deployed application link.
+∩é╖
+Complete GitHub repository containing the source code.
+∩é╖
+Clear README with setup instructions, technology stack and feature summary.
+∩é╖
+Application must use the provided dataset as the primary challenge data source.
+∩é╖
+Final solution must be ready for live demonstration and judge interaction.
+9. Evaluation Focus
+Area
+What Judges Will Look For
+Operational Thinking
+How effectively the interface represents real 
+airport operations and connects multiple 
+datasets.
+Functionality
+Depth and usefulness of interactions, monitoring, 
+drill-downs, alerts and controls.
+Data Integration
+Quality of relationships and insights created 
+across the provided tables.
+UI/UX
+Clarity, hierarchy, usability and suitability for a 
+high-pressure control-center environment.
+Real-Time Experience
+Credibility and usefulness of the simulated live 
+operational behaviour.
+Code Quality
+Structure, maintainability and implementation 
+quality.
+

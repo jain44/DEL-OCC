@@ -1,0 +1,28 @@
+﻿flights statuses: ['Departed']
+flights delay_mins: [30, 0, 60, 150]
+flights delay_reason: ['ATC', 'CREW', 'TECH', 'WX', 'TURNAROUND']
+flights airline: ['Vistara', 'British Airways', 'KLM', 'SpiceJet', 'Air France', 'Emirates', 'IndiGo', 'Air India Express', 'Qatar Airways', 'Lufthansa']
+flights aircraft_type: ['A350', 'B737', 'B787', 'A320']
+
+baggage statuses: ['Loaded']
+baggage check type: ['Check-in']
+baggage mishandled: [False]
+
+gate event types: ['Boarding Start']
+gate priority: ['Routine']
+
+security results: ['Clear']
+security flag: [False]
+
+maintenance types: ['Inspection']
+maintenance defect: ['Hydraulic leak']
+maintenance resolved: [False]
+
+staff dept: ['Ops']
+staff roles: ['Agent']
+staff overtime: [False]
+
+retail shop: ['Duty Free']
+retail category: ['Retail']
+retail items: ['Perfume']
+retail payment: ['Card']

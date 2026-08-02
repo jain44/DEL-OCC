@@ -1,0 +1,24 @@
+﻿=== flights ===
+['UK-633', 'Vistara', 'UK', 'DEL', 'SIN', '2024-11-11 15:23:02', '2024-11-11 15:53:02', '2024-11-11 17:23:02', '2024-11-11 20:53:02', 'A350', 'VT-PIU', np.int64(307), np.int64(271), 'Departed', np.int64(30), 'ATC', 'T3', 'B3', np.True_, np.int64(9330), np.int64(37118), '2024-11-11 15:38:02', np.True_, 'Moderate', np.float64(88.30218091521816), np.int64(81), np.float64(0.7488038825386119), 'Morning', 'Mon', np.False_, 'Autumn', 'Long-Haul Intl']
+
+=== passengers ===
+['MKVIIB', np.int64(67238288802223), 'PP-****4444', 'Adya', 'More', 'French', '1953-01-20', 'F', '2E', 'Business', '6E-1311', '2024-11-09 23:59:31.761870', '2024-11-10 00:59:31.761870', 'B4', np.int64(20), np.float64(nan), np.float64(nan), np.float64(nan), 'waida11@example.net', '+91-0535587138', np.float64(nan), np.float64(nan), np.False_, np.float64(2.965899480555556), np.False_, 'Economy', np.int64(71), 'Youth']
+
+=== baggage ===
+['4717 7156 73', 'KGIOOH', 'AF-3841', 'PP-****2486', np.float64(6.629158562908144), '55x40x23', 'Check-in', 'C12', '2024-12-29 22:33:54', '2024-10-26 00:31:15', np.int64(2), 'Loaded', np.False_, np.int64(0), 'Ramp', '2024-12-20 12:03:08', np.False_, np.float64(nan)]
+
+=== gate_events ===
+['T3-R18-474592', 'SQ-3327', 'B12', 'T3', 'Boarding Start', '2024-11-02 17:32:39', 'MTC-WY2PD', np.int64(120), 'Routine', np.False_, np.float64(nan), '2024-12-04 04:38:23', '2024-10-07 18:34:54', '2024-10-07 04:40:00']
+
+=== security_screening ===
+['SCR369386', 'PP-****3049', 'SZCC0Y', np.int64(1), '2024-12-03 01:26:50', '2024-10-28 07:40:04', '2024-12-03 18:57:42', 'Clear', np.float64(nan), np.False_, 'RET-0KANP', 'XRAY-1', np.int64(60), np.False_, np.False_, 'SHIFT-1', np.int64(400), np.int64(200), np.int64(200), np.False_]
+
+=== maintenance_logs ===
+['VT-ABC-WO-9571', 'VT-ABC', 'BA-1432', 'Inspection', 'RET-CUHDG', '2024-11-21 04:13:32', '2024-12-09 02:19:49', np.int64(5), np.int64(32), 'Hydraulic leak', 'Seal', np.int64(3), 'MTC-9WAIO', np.False_, np.False_, np.float64(nan)]
+
+=== staff_shifts ===
+['SEC-UGHFA', 'Gavin Sastry', 'Ops', 'Agent', '2024-12-29', '2024-12-12 04:52:42', '2024-10-19 14:08:02', 'T3', 'B12', 'OPS-AUNOS', np.int64(8), np.False_, np.float64(nan), '2024-11-30', 'English']
+
+=== retail_transactions ===
+['KSK4-1774440315797', 'OPS-VSGQN', 'Duty Free', 'Retail', 'PP-****8382', 'AI-2637', '2024-12-29 18:54:03', 'Perfume', np.int64(1), np.int64(3185), np.int64(1433), 'Card', 'INR', np.float64(nan), 'T3', 'Near Gate', np.True_]
+

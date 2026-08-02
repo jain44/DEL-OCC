@@ -1,0 +1,20 @@
+﻿Flight statuses: ['Departed']
+Flight delay reasons: [30, 0, 60, 150]
+Flight terminals: ['T3']
+Flight time of day: ['Morning', 'Evening', 'Night']
+Flight type: ['Long-Haul Intl', 'Domestic']
+
+Baggage statuses: ['Loaded']
+Baggage belt/check: ['Check-in']
+
+Gate event types: ['Boarding Start']
+
+Security results: ['Clear']
+
+Maintenance types: ['Inspection']
+
+Staff depts: ['Ops']
+Staff roles: ['Agent']
+
+Retail types: ['Duty Free']
+Retail categories: ['Perfume']
